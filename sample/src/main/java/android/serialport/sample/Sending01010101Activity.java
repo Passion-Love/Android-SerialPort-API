@@ -20,6 +20,7 @@ import java.io.IOException;
 import java.util.Arrays;
 
 import android.os.Bundle;
+import android.util.Log;
 
 public class Sending01010101Activity extends SerialPortActivity {
 
@@ -31,8 +32,10 @@ public class Sending01010101Activity extends SerialPortActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sending01010101);
         mBuffer = new byte[1024];
-        Arrays.fill(mBuffer, (byte) 0x55);
+        Arrays.fill(mBuffer, (byte) 0x66);
+        Log.e("n:","1");
         if (mSerialPort != null) {
+            Log.e("n:","2");
             mSendingThread = new SendingThread();
             mSendingThread.start();
         }

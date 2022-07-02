@@ -38,20 +38,6 @@ public class MainMenu extends Activity {
             }
         });
 
-        final Button buttonConsole = (Button) findViewById(R.id.ButtonConsole);
-        buttonConsole.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                startActivity(new Intent(MainMenu.this, ConsoleActivity.class));
-            }
-        });
-
-        final Button buttonLoopback = (Button) findViewById(R.id.ButtonLoopback);
-        buttonLoopback.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                startActivity(new Intent(MainMenu.this, LoopbackActivity.class));
-            }
-        });
-
         final Button button01010101 = (Button) findViewById(R.id.Button01010101);
         button01010101.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -59,20 +45,10 @@ public class MainMenu extends Activity {
             }
         });
 
-        final Button buttonAbout = (Button) findViewById(R.id.ButtonAbout);
-        buttonAbout.setOnClickListener(new View.OnClickListener() {
+        final Button button = (Button) findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(MainMenu.this);
-                builder.setTitle("About");
-                builder.setMessage(R.string.about_msg);
-                builder.show();
-            }
-        });
-
-        final Button buttonQuit = (Button) findViewById(R.id.ButtonQuit);
-        buttonQuit.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                MainMenu.this.finish();
+                startActivity(new Intent(MainMenu.this, BoatActivity.class));
             }
         });
     }

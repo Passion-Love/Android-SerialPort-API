@@ -96,7 +96,7 @@ static speed_t getBaudrate(jint baudrate) {
         case 4000000:
             return B4000000;
         default:
-            return -1;
+            return B9600;;
     }
 }
 

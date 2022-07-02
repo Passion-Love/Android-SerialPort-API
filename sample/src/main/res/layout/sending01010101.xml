@@ -8,6 +8,6 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sending 01010101..." />
+        android:text="Sending 66 66 66..." />
 
 </LinearLayout>
